@@ -422,31 +422,16 @@ img {
   margin-bottom: var(--space-md);
 }
 
-.legend-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: var(--space-md);
+.nutrition-list {
+  margin-top: var(--space-md);
 }
 
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  padding: var(--space-sm);
+.nutrition-list p {
+  margin-bottom: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
   background: var(--color-bg);
   border-radius: var(--radius-md);
 }
-
-.legend-dot {
-  width: 16px;
-  height: 16px;
-  border-radius: var(--radius-full);
-}
-
-.legend-dot--low { background: var(--color-healthy); }
-.legend-dot--medium { background: var(--color-moderate); }
-.legend-dot--high { background: var(--color-unhealthy); }
-.legend-dot--none { background: #e5e7eb; }
 
 /* Food Category Sections */
 .food-section {
@@ -485,18 +470,10 @@ img {
   font-weight: 600;
 }
 
-.section-count {
-  margin-left: auto;
-  background: rgba(255, 255, 255, 0.2);
-  padding: var(--space-xs) var(--space-md);
-  border-radius: var(--radius-full);
-  font-size: 0.9rem;
-}
-
 /* Food Grid */
 .food-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: var(--space-md);
 }
 
@@ -506,23 +483,11 @@ img {
   padding: var(--space-md);
   text-align: center;
   box-shadow: var(--shadow-sm);
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border: 2px solid transparent;
 }
-
-.food-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-.food-card--healthy:hover { border-color: var(--color-healthy); }
-.food-card--moderate:hover { border-color: var(--color-moderate); }
-.food-card--unhealthy:hover { border-color: var(--color-unhealthy); }
 
 .food-card__image {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto var(--space-sm);
   border-radius: var(--radius-md);
   object-fit: cover;
@@ -543,20 +508,11 @@ img {
 }
 
 .food-card__nutrients {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-xs);
+  font-size: 0.7rem;
+  color: var(--color-text-light);
+  margin-top: var(--space-xs);
+  line-height: 1.2;
 }
-
-.nutrient-badge {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
-}
-
-.nutrient-badge--low { background: var(--color-healthy); }
-.nutrient-badge--medium { background: var(--color-moderate); }
-.nutrient-badge--high { background: var(--color-unhealthy); }
 
 /* ============================================
    FLASHCARD GAME

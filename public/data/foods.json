@@ -724,7 +724,7 @@
     },
     {
       "id": "veggie-burger",
-      "name": "Veggie Burger",
+      "name": "Burger",
       "emoji": "🍔",
       "description": "Processed but protein",
       "protein": "high",
@@ -734,7 +734,7 @@
     },
     {
       "id": "veggie-chicken-nuggets",
-      "name": "Veggie Chicken Nuggets",
+      "name": "Chicken Nuggets",
       "emoji": "🍗",
       "description": "Processed but protein",
       "protein": "medium",
@@ -744,7 +744,7 @@
     },
     {
       "id": "veggie-bacon",
-      "name": "Veggie Bacon",
+      "name": "Bacon",
       "emoji": "🥓",
       "description": "Processed",
       "protein": "medium",
@@ -754,7 +754,7 @@
     },
     {
       "id": "veggie-sausage",
-      "name": "Veggie Sausage",
+      "name": "Sausage",
       "emoji": "🌭",
       "description": "Processed",
       "protein": "medium",
@@ -764,7 +764,7 @@
     },
     {
       "id": "veggie-hot-dog",
-      "name": "Veggie Hot Dog",
+      "name": "Hot Dog",
       "emoji": "🌭",
       "description": "Processed",
       "protein": "medium",
@@ -774,7 +774,7 @@
     },
     {
       "id": "veggie-cheeseburger",
-      "name": "Veggie Cheeseburger",
+      "name": "Cheeseburger",
       "emoji": "🍔",
       "description": "Processed + cheese",
       "protein": "high",
@@ -1020,6 +1020,16 @@
       "protein": "low",
       "fat": "low",
       "carbs": "medium",
+      "processed": "medium"
+    },
+    {
+      "id": "cereal",
+      "name": "Cereal",
+      "emoji": "🥣",
+      "description": "Breakfast cereal",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
       "processed": "medium"
     }
   ],
@@ -1309,16 +1319,6 @@
       "name": "Soda",
       "emoji": "🥤",
       "description": "Sugar, no nutrition",
-      "protein": "low",
-      "fat": "low",
-      "carbs": "high",
-      "processed": "high"
-    },
-    {
-      "id": "sugary-cereal",
-      "name": "Sugary Cereal",
-      "emoji": "🥣",
-      "description": "Sugar + artificial colors",
       "protein": "low",
       "fat": "low",
       "carbs": "high",

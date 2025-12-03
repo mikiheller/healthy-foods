@@ -20,7 +20,17 @@ export async function loadFoods() {
  * Get image path for a food item
  */
 export function getImagePath(foodId) {
-  return `./images/foods/${foodId}.png`;
+  return `/images/foods/${foodId}.png`;
+}
+
+/**
+ * Convert low/medium/high to dots
+ */
+function toDots(level) {
+  if (level === 'low') return '•';
+  if (level === 'medium') return '••';
+  if (level === 'high') return '•••';
+  return '•';
 }
 
 /**
@@ -41,10 +51,10 @@ export function renderFoodGrid(containerId, foods, category) {
       >
       <div class="food-card__emoji" style="display:none;">${food.emoji}</div>
       <div class="food-card__name">${food.name}</div>
-      <div class="food-card__nutrients" title="Protein | Fat | Carbs">
-        <span class="nutrient-badge nutrient-badge--${food.protein}" title="Protein: ${food.protein}"></span>
-        <span class="nutrient-badge nutrient-badge--${food.fat}" title="Fat: ${food.fat}"></span>
-        <span class="nutrient-badge nutrient-badge--${food.carbs}" title="Carbs: ${food.carbs}"></span>
+      <div class="food-card__nutrients">
+        <div>Protein ${toDots(food.protein)}</div>
+        <div>Fat ${toDots(food.fat)}</div>
+        <div>Carbs ${toDots(food.carbs)}</div>
       </div>
     </div>
   `).join('');
