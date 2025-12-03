@@ -1,0 +1,20 @@
+{
+  "name": "healthy-foods-game",
+  "version": "1.0.0",
+  "description": "A fun game to teach kids about healthy eating",
+  "type": "module",
+  "scripts": {
+    "generate-images": "node scripts/generate-images.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "openai": "^4.20.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "vite": "^5.0.0"
+  }
+}
+
