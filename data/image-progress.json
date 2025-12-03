@@ -1,0 +1,542 @@
+{
+  "apple": {
+    "generated": "2025-12-03T03:20:24.450Z",
+    "category": "healthy"
+  },
+  "banana": {
+    "generated": "2025-12-03T03:20:38.220Z",
+    "category": "healthy"
+  },
+  "orange": {
+    "generated": "2025-12-03T03:20:52.242Z",
+    "category": "healthy"
+  },
+  "strawberries": {
+    "generated": "2025-12-03T03:21:04.361Z",
+    "category": "healthy"
+  },
+  "blueberries": {
+    "generated": "2025-12-03T03:21:16.893Z",
+    "category": "healthy"
+  },
+  "raspberries": {
+    "generated": "2025-12-03T03:21:30.757Z",
+    "category": "healthy"
+  },
+  "grapes": {
+    "generated": "2025-12-03T03:21:43.969Z",
+    "category": "healthy"
+  },
+  "watermelon": {
+    "generated": "2025-12-03T03:21:56.684Z",
+    "category": "healthy"
+  },
+  "cantaloupe": {
+    "generated": "2025-12-03T03:22:09.323Z",
+    "category": "healthy"
+  },
+  "mango": {
+    "generated": "2025-12-03T03:22:22.018Z",
+    "category": "healthy"
+  },
+  "pineapple": {
+    "generated": "2025-12-03T03:22:35.913Z",
+    "category": "healthy"
+  },
+  "kiwi": {
+    "generated": "2025-12-03T03:22:50.429Z",
+    "category": "healthy"
+  },
+  "peach": {
+    "generated": "2025-12-03T03:23:03.491Z",
+    "category": "healthy"
+  },
+  "pear": {
+    "generated": "2025-12-03T03:23:20.933Z",
+    "category": "healthy"
+  },
+  "cherries": {
+    "generated": "2025-12-03T03:23:34.520Z",
+    "category": "healthy"
+  },
+  "broccoli": {
+    "generated": "2025-12-03T03:23:47.071Z",
+    "category": "healthy"
+  },
+  "carrots": {
+    "generated": "2025-12-03T03:23:59.224Z",
+    "category": "healthy"
+  },
+  "cucumber": {
+    "generated": "2025-12-03T03:24:13.433Z",
+    "category": "healthy"
+  },
+  "spinach": {
+    "generated": "2025-12-03T03:24:29.442Z",
+    "category": "healthy"
+  },
+  "cherry-tomatoes": {
+    "generated": "2025-12-03T03:24:47.361Z",
+    "category": "healthy"
+  },
+  "bell-pepper": {
+    "generated": "2025-12-03T03:25:00.562Z",
+    "category": "healthy"
+  },
+  "celery": {
+    "generated": "2025-12-03T03:25:13.151Z",
+    "category": "healthy"
+  },
+  "corn-on-the-cob": {
+    "generated": "2025-12-03T03:25:25.327Z",
+    "category": "healthy"
+  },
+  "green-beans": {
+    "generated": "2025-12-03T03:25:37.183Z",
+    "category": "healthy"
+  },
+  "peas": {
+    "generated": "2025-12-03T03:25:50.569Z",
+    "category": "healthy"
+  },
+  "sweet-potato": {
+    "generated": "2025-12-03T03:26:02.189Z",
+    "category": "healthy"
+  },
+  "lettuce": {
+    "generated": "2025-12-03T03:26:16.816Z",
+    "category": "healthy"
+  },
+  "avocado": {
+    "generated": "2025-12-03T03:26:29.109Z",
+    "category": "healthy"
+  },
+  "zucchini": {
+    "generated": "2025-12-03T03:26:41.074Z",
+    "category": "healthy"
+  },
+  "cauliflower": {
+    "generated": "2025-12-03T03:26:54.364Z",
+    "category": "healthy"
+  },
+  "snap-peas": {
+    "generated": "2025-12-03T03:27:07.169Z",
+    "category": "healthy"
+  },
+  "asparagus": {
+    "generated": "2025-12-03T03:27:20.718Z",
+    "category": "healthy"
+  },
+  "mushrooms": {
+    "generated": "2025-12-03T03:27:34.888Z",
+    "category": "healthy"
+  },
+  "hard-boiled-egg": {
+    "generated": "2025-12-03T03:27:46.559Z",
+    "category": "healthy"
+  },
+  "scrambled-eggs": {
+    "generated": "2025-12-03T03:28:01.927Z",
+    "category": "healthy"
+  },
+  "black-beans": {
+    "generated": "2025-12-03T03:28:15.972Z",
+    "category": "healthy"
+  },
+  "chickpeas": {
+    "generated": "2025-12-03T03:28:29.072Z",
+    "category": "healthy"
+  },
+  "lentils": {
+    "generated": "2025-12-03T03:28:42.406Z",
+    "category": "healthy"
+  },
+  "tofu": {
+    "generated": "2025-12-03T03:28:54.518Z",
+    "category": "healthy"
+  },
+  "edamame": {
+    "generated": "2025-12-03T03:29:09.108Z",
+    "category": "healthy"
+  },
+  "hummus": {
+    "generated": "2025-12-03T03:29:22.754Z",
+    "category": "healthy"
+  },
+  "kidney-beans": {
+    "generated": "2025-12-03T03:29:37.394Z",
+    "category": "healthy"
+  },
+  "natural-nut-butter": {
+    "generated": "2025-12-03T03:29:50.130Z",
+    "category": "healthy"
+  },
+  "plain-greek-yogurt": {
+    "generated": "2025-12-03T03:30:04.147Z",
+    "category": "healthy"
+  },
+  "milk": {
+    "generated": "2025-12-03T03:30:17.902Z",
+    "category": "healthy"
+  },
+  "cottage-cheese": {
+    "generated": "2025-12-03T03:30:31.970Z",
+    "category": "healthy"
+  },
+  "oatmeal": {
+    "generated": "2025-12-03T03:30:45.779Z",
+    "category": "healthy"
+  },
+  "brown-rice": {
+    "generated": "2025-12-03T03:30:58.616Z",
+    "category": "healthy"
+  },
+  "whole-wheat-bread": {
+    "generated": "2025-12-03T03:31:12.520Z",
+    "category": "healthy"
+  },
+  "quinoa": {
+    "generated": "2025-12-03T03:31:23.474Z",
+    "category": "healthy"
+  },
+  "cheese": {
+    "generated": "2025-12-03T03:31:36.233Z",
+    "category": "healthy"
+  },
+  "string-cheese": {
+    "generated": "2025-12-03T03:31:48.320Z",
+    "category": "healthy"
+  },
+  "pbj-sandwich": {
+    "generated": "2025-12-03T03:32:13.166Z",
+    "category": "healthy"
+  },
+  "bean-burrito": {
+    "generated": "2025-12-03T03:32:26.813Z",
+    "category": "healthy"
+  },
+  "veggie-sushi": {
+    "generated": "2025-12-03T03:32:39.234Z",
+    "category": "healthy"
+  },
+  "veggie-fried-rice": {
+    "generated": "2025-12-03T03:32:53.287Z",
+    "category": "healthy"
+  },
+  "homemade-granola-bar": {
+    "generated": "2025-12-03T03:33:04.494Z",
+    "category": "healthy"
+  },
+  "homemade-granola": {
+    "generated": "2025-12-03T03:33:15.677Z",
+    "category": "healthy"
+  },
+  "homemade-smoothie": {
+    "generated": "2025-12-03T03:33:27.705Z",
+    "category": "healthy"
+  },
+  "homemade-popsicle": {
+    "generated": "2025-12-03T03:33:44.595Z",
+    "category": "healthy"
+  },
+  "white-rice": {
+    "generated": "2025-12-03T03:33:56.834Z",
+    "category": "moderation"
+  },
+  "white-bread": {
+    "generated": "2025-12-03T03:34:07.952Z",
+    "category": "moderation"
+  },
+  "pasta": {
+    "generated": "2025-12-03T03:34:23.365Z",
+    "category": "moderation"
+  },
+  "bagel": {
+    "generated": "2025-12-03T03:34:37.645Z",
+    "category": "moderation"
+  },
+  "croissant": {
+    "generated": "2025-12-03T03:34:50.790Z",
+    "category": "moderation"
+  },
+  "tortilla": {
+    "generated": "2025-12-03T03:35:03.588Z",
+    "category": "moderation"
+  },
+  "pita-bread": {
+    "generated": "2025-12-03T03:35:17.350Z",
+    "category": "moderation"
+  },
+  "english-muffin": {
+    "generated": "2025-12-03T03:35:28.951Z",
+    "category": "moderation"
+  },
+  "pancakes": {
+    "generated": "2025-12-03T03:35:43.007Z",
+    "category": "moderation"
+  },
+  "waffles": {
+    "generated": "2025-12-03T03:35:57.694Z",
+    "category": "moderation"
+  },
+  "french-toast": {
+    "generated": "2025-12-03T03:36:11.066Z",
+    "category": "moderation"
+  },
+  "crackers": {
+    "generated": "2025-12-03T03:36:23.538Z",
+    "category": "moderation"
+  },
+  "veggie-burger": {
+    "generated": "2025-12-03T03:36:39.157Z",
+    "category": "moderation"
+  },
+  "veggie-chicken-nuggets": {
+    "generated": "2025-12-03T03:36:54.813Z",
+    "category": "moderation"
+  },
+  "veggie-bacon": {
+    "generated": "2025-12-03T03:37:08.719Z",
+    "category": "moderation"
+  },
+  "veggie-sausage": {
+    "generated": "2025-12-03T03:37:21.266Z",
+    "category": "moderation"
+  },
+  "veggie-hot-dog": {
+    "generated": "2025-12-03T03:37:33.393Z",
+    "category": "moderation"
+  },
+  "veggie-cheeseburger": {
+    "generated": "2025-12-03T03:37:47.778Z",
+    "category": "moderation"
+  },
+  "grilled-cheese": {
+    "generated": "2025-12-03T03:38:00.895Z",
+    "category": "moderation"
+  },
+  "quesadilla": {
+    "generated": "2025-12-03T03:38:15.770Z",
+    "category": "moderation"
+  },
+  "cheese-pizza": {
+    "generated": "2025-12-03T03:38:30.653Z",
+    "category": "moderation"
+  },
+  "macaroni-and-cheese": {
+    "generated": "2025-12-03T03:38:43.852Z",
+    "category": "moderation"
+  },
+  "cheese-tacos": {
+    "generated": "2025-12-03T03:38:56.194Z",
+    "category": "moderation"
+  },
+  "noodle-soup": {
+    "generated": "2025-12-03T03:39:13.091Z",
+    "category": "moderation"
+  },
+  "canned-soup": {
+    "generated": "2025-12-03T03:39:28.491Z",
+    "category": "moderation"
+  },
+  "stuffed-shells": {
+    "generated": "2025-12-03T03:39:41.309Z",
+    "category": "moderation"
+  },
+  "cheese-ravioli": {
+    "generated": "2025-12-03T03:39:52.646Z",
+    "category": "moderation"
+  },
+  "veggie-lasagna": {
+    "generated": "2025-12-03T03:40:04.714Z",
+    "category": "moderation"
+  },
+  "popcorn": {
+    "generated": "2025-12-03T03:40:16.710Z",
+    "category": "moderation"
+  },
+  "pretzels": {
+    "generated": "2025-12-03T03:40:29.406Z",
+    "category": "moderation"
+  },
+  "store-bought-granola-bar": {
+    "generated": "2025-12-03T03:40:41.978Z",
+    "category": "moderation"
+  },
+  "trail-mix": {
+    "generated": "2025-12-03T03:40:56.672Z",
+    "category": "moderation"
+  },
+  "rice-cakes": {
+    "generated": "2025-12-03T03:41:08.711Z",
+    "category": "moderation"
+  },
+  "vegetable-chips": {
+    "generated": "2025-12-03T03:41:22.815Z",
+    "category": "moderation"
+  },
+  "dried-fruit": {
+    "generated": "2025-12-03T03:41:38.145Z",
+    "category": "moderation"
+  },
+  "applesauce": {
+    "generated": "2025-12-03T03:41:51.170Z",
+    "category": "moderation"
+  },
+  "store-bought-granola": {
+    "generated": "2025-12-03T03:42:03.907Z",
+    "category": "moderation"
+  },
+  "goldfish-crackers": {
+    "generated": "2025-12-03T03:42:18.491Z",
+    "category": "moderation"
+  },
+  "fruit-juice": {
+    "generated": "2025-12-03T03:42:32.829Z",
+    "category": "moderation"
+  },
+  "chocolate-milk": {
+    "generated": "2025-12-03T03:42:50.724Z",
+    "category": "moderation"
+  },
+  "flavored-yogurt": {
+    "generated": "2025-12-03T03:43:02.636Z",
+    "category": "moderation"
+  },
+  "cheerios": {
+    "generated": "2025-12-03T03:43:14.131Z",
+    "category": "moderation"
+  },
+  "candy": {
+    "generated": "2025-12-03T03:43:31.157Z",
+    "category": "unhealthy"
+  },
+  "chocolate-bar": {
+    "generated": "2025-12-03T03:43:43.178Z",
+    "category": "unhealthy"
+  },
+  "lollipop": {
+    "generated": "2025-12-03T03:43:56.534Z",
+    "category": "unhealthy"
+  },
+  "gummy-bears": {
+    "generated": "2025-12-03T03:44:08.884Z",
+    "category": "unhealthy"
+  },
+  "candy-corn": {
+    "generated": "2025-12-03T03:44:19.722Z",
+    "category": "unhealthy"
+  },
+  "cotton-candy": {
+    "generated": "2025-12-03T03:44:31.711Z",
+    "category": "unhealthy"
+  },
+  "marshmallows": {
+    "generated": "2025-12-03T03:44:43.589Z",
+    "category": "unhealthy"
+  },
+  "fruit-roll-up": {
+    "generated": "2025-12-03T03:44:54.794Z",
+    "category": "unhealthy"
+  },
+  "jelly-beans": {
+    "generated": "2025-12-03T03:45:07.935Z",
+    "category": "unhealthy"
+  },
+  "caramel": {
+    "generated": "2025-12-03T03:45:22.714Z",
+    "category": "unhealthy"
+  },
+  "cookies": {
+    "generated": "2025-12-03T03:45:36.170Z",
+    "category": "unhealthy"
+  },
+  "cake": {
+    "generated": "2025-12-03T03:45:48.186Z",
+    "category": "unhealthy"
+  },
+  "cupcake": {
+    "generated": "2025-12-03T03:46:01.110Z",
+    "category": "unhealthy"
+  },
+  "donut": {
+    "generated": "2025-12-03T03:46:15.160Z",
+    "category": "unhealthy"
+  },
+  "brownie": {
+    "generated": "2025-12-03T03:46:26.837Z",
+    "category": "unhealthy"
+  },
+  "pie": {
+    "generated": "2025-12-03T03:46:40.834Z",
+    "category": "unhealthy"
+  },
+  "pop-tart": {
+    "generated": "2025-12-03T03:46:52.229Z",
+    "category": "unhealthy"
+  },
+  "cinnamon-roll": {
+    "generated": "2025-12-03T03:47:04.048Z",
+    "category": "unhealthy"
+  },
+  "ice-cream": {
+    "generated": "2025-12-03T03:47:17.564Z",
+    "category": "unhealthy"
+  },
+  "ice-cream-sundae": {
+    "generated": "2025-12-03T03:47:29.147Z",
+    "category": "unhealthy"
+  },
+  "milkshake": {
+    "generated": "2025-12-03T03:47:40.916Z",
+    "category": "unhealthy"
+  },
+  "sugary-popsicle": {
+    "generated": "2025-12-03T03:47:52.875Z",
+    "category": "unhealthy"
+  },
+  "slushie": {
+    "generated": "2025-12-03T03:48:04.344Z",
+    "category": "unhealthy"
+  },
+  "french-fries": {
+    "generated": "2025-12-03T03:48:15.426Z",
+    "category": "unhealthy"
+  },
+  "potato-chips": {
+    "generated": "2025-12-03T03:48:28.079Z",
+    "category": "unhealthy"
+  },
+  "cheetos": {
+    "generated": "2025-12-03T03:48:39.027Z",
+    "category": "unhealthy"
+  },
+  "doritos": {
+    "generated": "2025-12-03T03:48:50.866Z",
+    "category": "unhealthy"
+  },
+  "onion-rings": {
+    "generated": "2025-12-03T03:49:03.524Z",
+    "category": "unhealthy"
+  },
+  "soda": {
+    "generated": "2025-12-03T03:49:16.031Z",
+    "category": "unhealthy"
+  },
+  "sugary-cereal": {
+    "generated": "2025-12-03T03:49:28.969Z",
+    "category": "unhealthy"
+  },
+  "energy-drink": {
+    "generated": "2025-12-03T03:49:41.342Z",
+    "category": "unhealthy"
+  },
+  "capri-sun": {
+    "generated": "2025-12-03T03:49:53.552Z",
+    "category": "unhealthy"
+  },
+  "kool-aid": {
+    "generated": "2025-12-03T03:50:12.136Z",
+    "category": "unhealthy"
+  }
+}

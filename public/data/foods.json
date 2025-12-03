@@ -1,0 +1,1359 @@
+{
+  "healthy": [
+    {
+      "id": "apple",
+      "name": "Apple",
+      "emoji": "🍎",
+      "description": "High fiber, natural sugars",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "banana",
+      "name": "Banana",
+      "emoji": "🍌",
+      "description": "Potassium, energy",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "emoji": "🍊",
+      "description": "Vitamin C",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "strawberries",
+      "name": "Strawberries",
+      "emoji": "🍓",
+      "description": "Antioxidants",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "blueberries",
+      "name": "Blueberries",
+      "emoji": "🫐",
+      "description": "Superfood berries",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "raspberries",
+      "name": "Raspberries",
+      "emoji": "🫐",
+      "description": "High fiber",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "grapes",
+      "name": "Grapes",
+      "emoji": "🍇",
+      "description": "Natural sweetness",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "watermelon",
+      "name": "Watermelon",
+      "emoji": "🍉",
+      "description": "Hydrating",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "cantaloupe",
+      "name": "Cantaloupe",
+      "emoji": "🍈",
+      "description": "Vitamin A",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "mango",
+      "name": "Mango",
+      "emoji": "🥭",
+      "description": "Tropical vitamins",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "pineapple",
+      "name": "Pineapple",
+      "emoji": "🍍",
+      "description": "Enzymes, vitamin C",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "kiwi",
+      "name": "Kiwi",
+      "emoji": "🥝",
+      "description": "More vitamin C than oranges",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "peach",
+      "name": "Peach",
+      "emoji": "🍑",
+      "description": "Fiber, vitamins",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "pear",
+      "name": "Pear",
+      "emoji": "🍐",
+      "description": "Gentle on tummy",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "cherries",
+      "name": "Cherries",
+      "emoji": "🍒",
+      "description": "Antioxidants",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "broccoli",
+      "name": "Broccoli",
+      "emoji": "🥦",
+      "description": "Little trees - calcium, fiber",
+      "protein": "medium",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "emoji": "🥕",
+      "description": "Vitamin A, great for eyes",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "emoji": "🥒",
+      "description": "Hydrating, crunchy",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "emoji": "🥬",
+      "description": "Iron, protein for a veggie",
+      "protein": "medium",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "cherry-tomatoes",
+      "name": "Cherry Tomatoes",
+      "emoji": "🍅",
+      "description": "Lycopene",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "bell-pepper",
+      "name": "Bell Pepper",
+      "emoji": "🫑",
+      "description": "Vitamin C, colorful",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "emoji": "🥬",
+      "description": "Fiber, water",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "corn-on-the-cob",
+      "name": "Corn on the Cob",
+      "emoji": "🌽",
+      "description": "Fiber, fun to eat",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "green-beans",
+      "name": "Green Beans",
+      "emoji": "🫛",
+      "description": "Fiber, vitamins",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "peas",
+      "name": "Peas",
+      "emoji": "🫛",
+      "description": "Protein, fiber",
+      "protein": "medium",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "sweet-potato",
+      "name": "Sweet Potato",
+      "emoji": "🍠",
+      "description": "Complex carbs, vitamins",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "emoji": "🥬",
+      "description": "Low calorie, hydrating",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado",
+      "emoji": "🥑",
+      "description": "Healthy fats",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "emoji": "🥒",
+      "description": "Mild veggie",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "emoji": "🥬",
+      "description": "Versatile, vitamin C",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "snap-peas",
+      "name": "Snap Peas",
+      "emoji": "🫛",
+      "description": "Crunchy, fun",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "asparagus",
+      "name": "Asparagus",
+      "emoji": "🥬",
+      "description": "Vitamins",
+      "protein": "medium",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "emoji": "🍄",
+      "description": "Vitamin D",
+      "protein": "medium",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "hard-boiled-egg",
+      "name": "Hard-Boiled Egg",
+      "emoji": "🥚",
+      "description": "Complete protein",
+      "protein": "high",
+      "fat": "medium",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "scrambled-eggs",
+      "name": "Scrambled Eggs",
+      "emoji": "🍳",
+      "description": "Protein, choline",
+      "protein": "high",
+      "fat": "medium",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "black-beans",
+      "name": "Black Beans",
+      "emoji": "🫘",
+      "description": "Fiber + protein",
+      "protein": "high",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas",
+      "emoji": "🫘",
+      "description": "Versatile protein",
+      "protein": "high",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "emoji": "🫘",
+      "description": "Iron + protein",
+      "protein": "high",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu",
+      "emoji": "🧈",
+      "description": "Plant protein",
+      "protein": "high",
+      "fat": "medium",
+      "carbs": "low",
+      "processed": "low"
+    },
+    {
+      "id": "edamame",
+      "name": "Edamame",
+      "emoji": "🫛",
+      "description": "Fun to eat, protein",
+      "protein": "high",
+      "fat": "medium",
+      "carbs": "low",
+      "processed": "none"
+    },
+    {
+      "id": "hummus",
+      "name": "Hummus",
+      "emoji": "🥙",
+      "description": "Protein dip",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "low",
+      "processed": "low"
+    },
+    {
+      "id": "kidney-beans",
+      "name": "Kidney Beans",
+      "emoji": "🫘",
+      "description": "Fiber + protein",
+      "protein": "high",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "natural-nut-butter",
+      "name": "Natural Nut Butter",
+      "emoji": "🥜",
+      "description": "Healthy fats + protein",
+      "protein": "medium",
+      "fat": "high",
+      "carbs": "low",
+      "processed": "low"
+    },
+    {
+      "id": "plain-greek-yogurt",
+      "name": "Plain Greek Yogurt",
+      "emoji": "🥛",
+      "description": "High protein, probiotics",
+      "protein": "high",
+      "fat": "medium",
+      "carbs": "low",
+      "processed": "low"
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "emoji": "🥛",
+      "description": "Calcium, protein",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "low",
+      "processed": "low"
+    },
+    {
+      "id": "cottage-cheese",
+      "name": "Cottage Cheese",
+      "emoji": "🧀",
+      "description": "Very high protein",
+      "protein": "high",
+      "fat": "medium",
+      "carbs": "low",
+      "processed": "low"
+    },
+    {
+      "id": "oatmeal",
+      "name": "Oatmeal",
+      "emoji": "🥣",
+      "description": "Whole grain, fiber",
+      "protein": "medium",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "brown-rice",
+      "name": "Brown Rice",
+      "emoji": "🍚",
+      "description": "Whole grain",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "whole-wheat-bread",
+      "name": "Whole Wheat Bread",
+      "emoji": "🍞",
+      "description": "Fiber, B vitamins",
+      "protein": "medium",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "low"
+    },
+    {
+      "id": "quinoa",
+      "name": "Quinoa",
+      "emoji": "🍚",
+      "description": "Complete protein grain",
+      "protein": "high",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "emoji": "🧀",
+      "description": "Protein and calcium",
+      "protein": "high",
+      "fat": "high",
+      "carbs": "low",
+      "processed": "low"
+    },
+    {
+      "id": "string-cheese",
+      "name": "String Cheese",
+      "emoji": "🧀",
+      "description": "Fun protein snack",
+      "protein": "high",
+      "fat": "medium",
+      "carbs": "low",
+      "processed": "low"
+    },
+    {
+      "id": "pbj-sandwich",
+      "name": "PB&J Sandwich",
+      "emoji": "🥪",
+      "description": "Protein + fruit spread",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "medium",
+      "processed": "low"
+    },
+    {
+      "id": "bean-burrito",
+      "name": "Bean Burrito",
+      "emoji": "🌯",
+      "description": "Protein-packed wrap",
+      "protein": "high",
+      "fat": "medium",
+      "carbs": "medium",
+      "processed": "low"
+    },
+    {
+      "id": "veggie-sushi",
+      "name": "Veggie Sushi Roll",
+      "emoji": "🍣",
+      "description": "Veggies + rice",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "low"
+    },
+    {
+      "id": "veggie-fried-rice",
+      "name": "Veggie Fried Rice",
+      "emoji": "🍚",
+      "description": "Veggies + rice + egg",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "medium",
+      "processed": "low"
+    },
+    {
+      "id": "homemade-granola-bar",
+      "name": "Homemade Granola Bar",
+      "emoji": "🥜",
+      "description": "Oats, nuts, no added sugar",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "medium",
+      "processed": "low"
+    },
+    {
+      "id": "homemade-granola",
+      "name": "Homemade Granola",
+      "emoji": "🥣",
+      "description": "Oats, nuts, honey",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "medium",
+      "processed": "low"
+    },
+    {
+      "id": "homemade-smoothie",
+      "name": "Homemade Smoothie",
+      "emoji": "🥤",
+      "description": "Fruit + yogurt blend",
+      "protein": "medium",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "none"
+    },
+    {
+      "id": "homemade-popsicle",
+      "name": "Homemade Popsicle",
+      "emoji": "🧊",
+      "description": "Frozen fruit, no added sugar",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "low",
+      "processed": "none"
+    }
+  ],
+  "moderation": [
+    {
+      "id": "white-rice",
+      "name": "White Rice",
+      "emoji": "🍚",
+      "description": "Refined but not harmful",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "white-bread",
+      "name": "White Bread",
+      "emoji": "🍞",
+      "description": "Low fiber",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "pasta",
+      "name": "Pasta",
+      "emoji": "🍝",
+      "description": "Refined carbs",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "bagel",
+      "name": "Bagel",
+      "emoji": "🥯",
+      "description": "Dense carbs",
+      "protein": "medium",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "croissant",
+      "name": "Croissant",
+      "emoji": "🥐",
+      "description": "Butter, refined flour",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "tortilla",
+      "name": "Tortilla",
+      "emoji": "🫓",
+      "description": "Refined flour",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "medium"
+    },
+    {
+      "id": "pita-bread",
+      "name": "Pita Bread",
+      "emoji": "🫓",
+      "description": "Refined flour",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "medium"
+    },
+    {
+      "id": "english-muffin",
+      "name": "English Muffin",
+      "emoji": "🧁",
+      "description": "Refined flour",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "medium"
+    },
+    {
+      "id": "pancakes",
+      "name": "Pancakes",
+      "emoji": "🥞",
+      "description": "Refined flour, some sugar",
+      "protein": "low",
+      "fat": "medium",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "waffles",
+      "name": "Waffles",
+      "emoji": "🧇",
+      "description": "Similar to pancakes",
+      "protein": "low",
+      "fat": "medium",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "french-toast",
+      "name": "French Toast",
+      "emoji": "🍞",
+      "description": "Bread + egg + sugar",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "crackers",
+      "name": "Crackers",
+      "emoji": "🍘",
+      "description": "Refined, some salt",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "medium"
+    },
+    {
+      "id": "veggie-burger",
+      "name": "Veggie Burger",
+      "emoji": "🍔",
+      "description": "Processed but protein",
+      "protein": "high",
+      "fat": "medium",
+      "carbs": "medium",
+      "processed": "high"
+    },
+    {
+      "id": "veggie-chicken-nuggets",
+      "name": "Veggie Chicken Nuggets",
+      "emoji": "🍗",
+      "description": "Processed but protein",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "medium",
+      "processed": "high"
+    },
+    {
+      "id": "veggie-bacon",
+      "name": "Veggie Bacon",
+      "emoji": "🥓",
+      "description": "Processed",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "low",
+      "processed": "high"
+    },
+    {
+      "id": "veggie-sausage",
+      "name": "Veggie Sausage",
+      "emoji": "🌭",
+      "description": "Processed",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "low",
+      "processed": "high"
+    },
+    {
+      "id": "veggie-hot-dog",
+      "name": "Veggie Hot Dog",
+      "emoji": "🌭",
+      "description": "Processed",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "medium",
+      "processed": "high"
+    },
+    {
+      "id": "veggie-cheeseburger",
+      "name": "Veggie Cheeseburger",
+      "emoji": "🍔",
+      "description": "Processed + cheese",
+      "protein": "high",
+      "fat": "high",
+      "carbs": "medium",
+      "processed": "high"
+    },
+    {
+      "id": "grilled-cheese",
+      "name": "Grilled Cheese Sandwich",
+      "emoji": "🥪",
+      "description": "Cheese + refined bread",
+      "protein": "medium",
+      "fat": "high",
+      "carbs": "medium",
+      "processed": "medium"
+    },
+    {
+      "id": "quesadilla",
+      "name": "Quesadilla",
+      "emoji": "🫓",
+      "description": "Cheese + tortilla",
+      "protein": "medium",
+      "fat": "high",
+      "carbs": "medium",
+      "processed": "medium"
+    },
+    {
+      "id": "cheese-pizza",
+      "name": "Cheese Pizza",
+      "emoji": "🍕",
+      "description": "Refined dough, cheese",
+      "protein": "medium",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "macaroni-and-cheese",
+      "name": "Macaroni and Cheese",
+      "emoji": "🧀",
+      "description": "Refined pasta, cheese",
+      "protein": "medium",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "cheese-tacos",
+      "name": "Cheese Tacos",
+      "emoji": "🌮",
+      "description": "Mixed bag",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "medium",
+      "processed": "medium"
+    },
+    {
+      "id": "noodle-soup",
+      "name": "Noodle Soup",
+      "emoji": "🍜",
+      "description": "Refined noodles",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "medium"
+    },
+    {
+      "id": "canned-soup",
+      "name": "Canned Soup",
+      "emoji": "🥫",
+      "description": "Sodium, processing",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "high"
+    },
+    {
+      "id": "stuffed-shells",
+      "name": "Stuffed Shells",
+      "emoji": "🍝",
+      "description": "Cheese + pasta",
+      "protein": "medium",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "cheese-ravioli",
+      "name": "Cheese Ravioli",
+      "emoji": "🥟",
+      "description": "Cheese + pasta",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "veggie-lasagna",
+      "name": "Veggie Lasagna",
+      "emoji": "🍝",
+      "description": "Layers of moderation",
+      "protein": "medium",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "popcorn",
+      "name": "Popcorn",
+      "emoji": "🍿",
+      "description": "Whole grain but often buttery",
+      "protein": "low",
+      "fat": "medium",
+      "carbs": "medium",
+      "processed": "low"
+    },
+    {
+      "id": "pretzels",
+      "name": "Pretzels",
+      "emoji": "🥨",
+      "description": "Refined flour, salt",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "store-bought-granola-bar",
+      "name": "Store-Bought Granola Bar",
+      "emoji": "🥜",
+      "description": "Often has added sugar",
+      "protein": "low",
+      "fat": "medium",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "trail-mix",
+      "name": "Trail Mix",
+      "emoji": "🥜",
+      "description": "Nuts good, but often has candy",
+      "protein": "medium",
+      "fat": "high",
+      "carbs": "medium",
+      "processed": "low"
+    },
+    {
+      "id": "rice-cakes",
+      "name": "Rice Cakes",
+      "emoji": "🍘",
+      "description": "Low calorie but refined",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "medium"
+    },
+    {
+      "id": "vegetable-chips",
+      "name": "Vegetable Chips",
+      "emoji": "🥔",
+      "description": "Better than regular, still processed",
+      "protein": "low",
+      "fat": "medium",
+      "carbs": "medium",
+      "processed": "medium"
+    },
+    {
+      "id": "dried-fruit",
+      "name": "Dried Fruit",
+      "emoji": "🍇",
+      "description": "Natural but concentrated sugar",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "low"
+    },
+    {
+      "id": "applesauce",
+      "name": "Applesauce",
+      "emoji": "🍎",
+      "description": "Good but sometimes added sugar",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "low"
+    },
+    {
+      "id": "store-bought-granola",
+      "name": "Store-Bought Granola",
+      "emoji": "🥣",
+      "description": "Often has added sugar",
+      "protein": "low",
+      "fat": "medium",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "goldfish-crackers",
+      "name": "Goldfish Crackers",
+      "emoji": "🐟",
+      "description": "Refined, processed",
+      "protein": "low",
+      "fat": "medium",
+      "carbs": "medium",
+      "processed": "high"
+    },
+    {
+      "id": "fruit-juice",
+      "name": "100% Fruit Juice",
+      "emoji": "🧃",
+      "description": "Natural sugar but no fiber",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "low"
+    },
+    {
+      "id": "chocolate-milk",
+      "name": "Chocolate Milk",
+      "emoji": "🥛",
+      "description": "Added sugar but protein",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "flavored-yogurt",
+      "name": "Flavored Yogurt",
+      "emoji": "🥛",
+      "description": "Added sugar",
+      "protein": "medium",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "medium"
+    },
+    {
+      "id": "cheerios",
+      "name": "Cheerios",
+      "emoji": "🥣",
+      "description": "Low sugar cereal",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "medium",
+      "processed": "medium"
+    }
+  ],
+  "unhealthy": [
+    {
+      "id": "candy",
+      "name": "Candy",
+      "emoji": "🍬",
+      "description": "Pure sugar",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "chocolate-bar",
+      "name": "Chocolate Bar",
+      "emoji": "🍫",
+      "description": "Sugar + fat",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "lollipop",
+      "name": "Lollipop",
+      "emoji": "🍭",
+      "description": "Pure sugar",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "gummy-bears",
+      "name": "Gummy Bears",
+      "emoji": "🧸",
+      "description": "Sugar, gelatin",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "candy-corn",
+      "name": "Candy Corn",
+      "emoji": "🌽",
+      "description": "Pure sugar",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "cotton-candy",
+      "name": "Cotton Candy",
+      "emoji": "☁️",
+      "description": "Pure sugar",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "marshmallows",
+      "name": "Marshmallows",
+      "emoji": "☁️",
+      "description": "Sugar, no nutrition",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "fruit-roll-up",
+      "name": "Fruit Roll-Up",
+      "emoji": "🍇",
+      "description": "Processed sugar",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "jelly-beans",
+      "name": "Jelly Beans",
+      "emoji": "🫘",
+      "description": "Pure sugar",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "caramel",
+      "name": "Caramel",
+      "emoji": "🍬",
+      "description": "Sugar + fat",
+      "protein": "low",
+      "fat": "medium",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "cookies",
+      "name": "Cookies",
+      "emoji": "🍪",
+      "description": "Sugar + refined flour + fat",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "cake",
+      "name": "Cake",
+      "emoji": "🎂",
+      "description": "Sugar + refined flour + frosting",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "cupcake",
+      "name": "Cupcake",
+      "emoji": "🧁",
+      "description": "Small cake, big sugar",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "donut",
+      "name": "Donut",
+      "emoji": "🍩",
+      "description": "Fried + sugar",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "brownie",
+      "name": "Brownie",
+      "emoji": "🍫",
+      "description": "Sugar + fat",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "pie",
+      "name": "Pie",
+      "emoji": "🥧",
+      "description": "Sugar + refined crust",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "pop-tart",
+      "name": "Pop-Tart",
+      "emoji": "🥐",
+      "description": "Processed, sugary",
+      "protein": "low",
+      "fat": "medium",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "cinnamon-roll",
+      "name": "Cinnamon Roll",
+      "emoji": "🥐",
+      "description": "Sugar + refined flour",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "ice-cream",
+      "name": "Ice Cream",
+      "emoji": "🍨",
+      "description": "Sugar + fat",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "ice-cream-sundae",
+      "name": "Ice Cream Sundae",
+      "emoji": "🍨",
+      "description": "Extra toppings",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "milkshake",
+      "name": "Milkshake",
+      "emoji": "🥤",
+      "description": "Lots of sugar + fat",
+      "protein": "medium",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "sugary-popsicle",
+      "name": "Store-Bought Popsicle",
+      "emoji": "🧊",
+      "description": "Frozen sugar water",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "slushie",
+      "name": "Slushie",
+      "emoji": "🧊",
+      "description": "Frozen sugar + dye",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "french-fries",
+      "name": "French Fries",
+      "emoji": "🍟",
+      "description": "Fried, salty",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "potato-chips",
+      "name": "Potato Chips",
+      "emoji": "🥔",
+      "description": "Fried, salty, processed",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "cheetos",
+      "name": "Cheetos",
+      "emoji": "🧀",
+      "description": "Processed, artificial",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "doritos",
+      "name": "Doritos",
+      "emoji": "📐",
+      "description": "Processed, artificial",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "onion-rings",
+      "name": "Onion Rings",
+      "emoji": "🧅",
+      "description": "Fried",
+      "protein": "low",
+      "fat": "high",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "soda",
+      "name": "Soda",
+      "emoji": "🥤",
+      "description": "Sugar, no nutrition",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "sugary-cereal",
+      "name": "Sugary Cereal",
+      "emoji": "🥣",
+      "description": "Sugar + artificial colors",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "energy-drink",
+      "name": "Energy Drink",
+      "emoji": "⚡",
+      "description": "Sugar + caffeine",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "capri-sun",
+      "name": "Capri Sun",
+      "emoji": "🧃",
+      "description": "Sugar water",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    },
+    {
+      "id": "kool-aid",
+      "name": "Kool-Aid",
+      "emoji": "🥤",
+      "description": "Sugar + artificial",
+      "protein": "low",
+      "fat": "low",
+      "carbs": "high",
+      "processed": "high"
+    }
+  ]
+}
+
