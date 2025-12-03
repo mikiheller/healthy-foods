@@ -3,17 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🍎 Healthy Foods Adventure!</title>
+  <title>Healthy Foods Adventure!</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div id="app">
-    <!-- Content will be loaded dynamically -->
+<body class="landing-page">
+  <div class="floating-foods">
+    <span class="float-food" style="--delay: 0s; --x: 10%; --y: 20%;">🍎</span>
+    <span class="float-food" style="--delay: 1s; --x: 85%; --y: 15%;">🥦</span>
+    <span class="float-food" style="--delay: 2s; --x: 75%; --y: 70%;">🍌</span>
+    <span class="float-food" style="--delay: 0.5s; --x: 20%; --y: 75%;">🥕</span>
+    <span class="float-food" style="--delay: 1.5s; --x: 50%; --y: 10%;">🍇</span>
+    <span class="float-food" style="--delay: 2.5s; --x: 90%; --y: 50%;">🥑</span>
+    <span class="float-food" style="--delay: 3s; --x: 5%; --y: 50%;">🍓</span>
   </div>
-  <script type="module" src="/src/main.js"></script>
+
+  <main class="landing-container">
+    <header class="landing-header">
+      <h1 class="main-title">
+        <span class="title-emoji">🍎</span>
+        Healthy Foods Adventure!
+        <span class="title-emoji">🥦</span>
+      </h1>
+      <p class="subtitle">Learn which foods help you grow strong and healthy!</p>
+    </header>
+
+    <nav class="menu-grid">
+      <a href="guide.html" class="menu-card menu-card--guide">
+        <div class="menu-card__icon">📚</div>
+        <h2 class="menu-card__title">Food Guide</h2>
+        <p class="menu-card__description">Learn about healthy, okay, and unhealthy foods</p>
+        <div class="menu-card__arrow">→</div>
+      </a>
+
+      <a href="game.html" class="menu-card menu-card--game">
+        <div class="menu-card__icon">🎮</div>
+        <h2 class="menu-card__title">Flashcard Game</h2>
+        <p class="menu-card__description">Test your knowledge! Is this food healthy?</p>
+        <div class="menu-card__arrow">→</div>
+      </a>
+
+      <a href="menu.html" class="menu-card menu-card--menu">
+        <div class="menu-card__icon">🍽️</div>
+        <h2 class="menu-card__title">Dessert Tracker</h2>
+        <p class="menu-card__description">Track your meals and earn dessert!</p>
+        <div class="menu-card__arrow">→</div>
+      </a>
+    </nav>
+
+    <footer class="landing-footer">
+      <p>Made with 💚 for healthy eating</p>
+    </footer>
+  </main>
 </body>
 </html>
-

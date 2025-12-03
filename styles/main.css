@@ -1,0 +1,501 @@
+/* ============================================
+   🍎 HEALTHY FOODS ADVENTURE - Main Styles
+   ============================================ */
+
+:root {
+  /* Fun, kid-friendly color palette */
+  --color-healthy: #22c55e;
+  --color-healthy-light: #bbf7d0;
+  --color-healthy-dark: #15803d;
+  
+  --color-moderate: #f59e0b;
+  --color-moderate-light: #fef3c7;
+  --color-moderate-dark: #b45309;
+  
+  --color-unhealthy: #ef4444;
+  --color-unhealthy-light: #fecaca;
+  --color-unhealthy-dark: #b91c1c;
+  
+  --color-bg-start: #fef7cd;
+  --color-bg-end: #fbcfe8;
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+  
+  --font-display: 'Fredoka', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+  
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+  --shadow-glow: 0 0 30px rgba(255,255,255,0.5);
+  
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--color-bg-start) 0%, var(--color-bg-end) 100%);
+  background-attachment: fixed;
+}
+
+/* ============================================
+   LANDING PAGE
+   ============================================ */
+
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating food decorations */
+.floating-foods {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.float-item {
+  position: absolute;
+  font-size: 3rem;
+  left: var(--x);
+  top: var(--y);
+  animation: float 6s ease-in-out infinite;
+  animation-delay: var(--delay);
+  opacity: 0.6;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-20px) rotate(5deg); }
+  50% { transform: translateY(-10px) rotate(-3deg); }
+  75% { transform: translateY(-25px) rotate(3deg); }
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.title-emoji {
+  font-size: 0.9em;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.title-emoji:last-child {
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.title-highlight {
+  background: linear-gradient(135deg, var(--color-healthy) 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--color-text-light);
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+/* Menu cards */
+.menu-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.menu-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.card-guide::before { background: linear-gradient(90deg, var(--color-healthy), #06b6d4); }
+.card-game::before { background: linear-gradient(90deg, #8b5cf6, #ec4899); }
+.card-menu::before { background: linear-gradient(90deg, var(--color-moderate), #f97316); }
+
+.menu-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.menu-card:active {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.card-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+.menu-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.menu-card p {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card-arrow {
+  margin-top: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-bg-start);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.menu-card:hover .card-arrow {
+  transform: translateX(5px);
+}
+
+.card-guide:hover .card-arrow { background: var(--color-healthy-light); color: var(--color-healthy-dark); }
+.card-game:hover .card-arrow { background: #ede9fe; color: #7c3aed; }
+.card-menu:hover .card-arrow { background: var(--color-moderate-light); color: var(--color-moderate-dark); }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text-light);
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   SHARED PAGE STYLES
+   ============================================ */
+
+.page-container {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  transform: translateX(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 700;
+  text-align: center;
+  flex: 1;
+}
+
+.page-title-spacer {
+  width: 100px;
+}
+
+/* ============================================
+   FOOD CARDS
+   ============================================ */
+
+.food-card {
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.food-card-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: #f3f4f6;
+}
+
+.food-card-content {
+  padding: 1rem;
+}
+
+.food-card-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.food-card-description {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+/* Category badges */
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-healthy {
+  background: var(--color-healthy-light);
+  color: var(--color-healthy-dark);
+}
+
+.badge-moderate {
+  background: var(--color-moderate-light);
+  color: var(--color-moderate-dark);
+}
+
+.badge-unhealthy {
+  background: var(--color-unhealthy-light);
+  color: var(--color-unhealthy-dark);
+}
+
+/* Nutrient indicators */
+.nutrient-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.nutrient-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  width: 50px;
+}
+
+.nutrient-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.nutrient-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e5e7eb;
+}
+
+.nutrient-dot.filled {
+  background: var(--color-healthy);
+}
+
+.nutrient-dot.filled.medium {
+  background: var(--color-moderate);
+}
+
+.nutrient-dot.filled.high {
+  background: var(--color-unhealthy);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-healthy) 0%, #06b6d4 100%);
+  color: white;
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(34, 197, 94, 0.4);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-healthy {
+  background: var(--color-healthy);
+  color: white;
+}
+
+.btn-moderate {
+  background: var(--color-moderate);
+  color: white;
+}
+
+.btn-unhealthy {
+  background: var(--color-unhealthy);
+  color: white;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .landing-page {
+    padding: 1rem;
+  }
+  
+  .menu-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .menu-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .float-item {
+    font-size: 2rem;
+    opacity: 0.4;
+  }
+  
+  .page-header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .page-title-spacer {
+    display: none;
+  }
+}
+

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dessert Tracker - Healthy Foods Adventure!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header page-header--moderate">
+    <a href="index.html" class="back-button">← Home</a>
+    <h1 class="page-title">🍽️ Dessert Tracker</h1>
+    <p class="page-subtitle">Track your meals and earn your dessert!</p>
+  </header>
+
+  <main class="menu-container">
+    <!-- Dessert Status -->
+    <section class="dessert-status" id="dessert-status">
+      <div class="dessert-status__icon" id="status-icon">🥗</div>
+      <h2 class="dessert-status__title" id="status-title">Keep eating healthy!</h2>
+      <p class="dessert-status__message" id="status-message">Add the foods you've eaten today to see if you're ready for dessert.</p>
+      <div class="progress-bar">
+        <div class="progress-bar__fill" id="progress-fill" style="width: 0%"></div>
+      </div>
+      <p style="margin-top: var(--space-sm); font-size: 0.9rem; color: var(--color-text-light);" id="progress-text">0 healthy points</p>
+    </section>
+
+    <!-- Today's Meals -->
+    <section class="meal-tracker">
+      <h2>🍴 What I Ate Today</h2>
+      <div class="meal-list" id="meal-list">
+        <p style="color: var(--color-text-light); text-align: center; padding: var(--space-lg);">
+          No foods added yet. Add what you've eaten below!
+        </p>
+      </div>
+      <button class="reset-btn" id="reset-btn">🗑️ Start Fresh (New Day)</button>
+    </section>
+
+    <!-- Add Food -->
+    <section class="add-food-section">
+      <h2>➕ Add Food</h2>
+      <input type="text" class="food-search" id="food-search" placeholder="🔍 Search for a food...">
+      <div class="food-picker-grid" id="food-picker"></div>
+    </section>
+  </main>
+
+  <script type="module">
+    import { loadFoods, getImagePath } from './app.js';
+
+    let foods = null;
+    let allFoods = [];
+    let meals = JSON.parse(localStorage.getItem('todaysMeals') || '[]');
+
+    // Points system
+    const POINTS = {
+      healthy: 2,
+      moderation: 1,
+      unhealthy: -1
+    };
+
+    const DESSERT_THRESHOLD = 6; // Need 6 points to earn dessert
+
+    function calculatePoints() {
+      return meals.reduce((total, meal) => total + (POINTS[meal.category] || 0), 0);
+    }
+
+    function updateDessertStatus() {
+      const points = calculatePoints();
+      const percentage = Math.min(100, Math.max(0, (points / DESSERT_THRESHOLD) * 100));
+      
+      const statusEl = document.getElementById('dessert-status');
+      const iconEl = document.getElementById('status-icon');
+      const titleEl = document.getElementById('status-title');
+      const messageEl = document.getElementById('status-message');
+      const progressEl = document.getElementById('progress-fill');
+      const progressTextEl = document.getElementById('progress-text');
+      
+      progressEl.style.width = `${percentage}%`;
+      progressTextEl.textContent = `${points} healthy points (need ${DESSERT_THRESHOLD} for dessert)`;
+      
+      statusEl.classList.remove('dessert-status--ready', 'dessert-status--not-ready');
+      
+      if (points >= DESSERT_THRESHOLD) {
+        statusEl.classList.add('dessert-status--ready');
+        iconEl.textContent = '🎉';
+        titleEl.textContent = 'You earned dessert!';
+        messageEl.textContent = 'Great job eating healthy today! You can have a treat!';
+      } else if (points < 0) {
+        statusEl.classList.add('dessert-status--not-ready');
+        iconEl.textContent = '😟';
+        titleEl.textContent = 'Too many unhealthy foods!';
+        messageEl.textContent = 'Try to balance it out with some healthy foods.';
+      } else {
+        statusEl.classList.add('dessert-status--not-ready');
+        iconEl.textContent = '🥗';
+        titleEl.textContent = 'Keep eating healthy!';
+        messageEl.textContent = `You need ${DESSERT_THRESHOLD - points} more points for dessert.`;
+      }
+    }
+
+    function saveMeals() {
+      localStorage.setItem('todaysMeals', JSON.stringify(meals));
+    }
+
+    function renderMeals() {
+      const listEl = document.getElementById('meal-list');
+      
+      if (meals.length === 0) {
+        listEl.innerHTML = `
+          <p style="color: var(--color-text-light); text-align: center; padding: var(--space-lg);">
+            No foods added yet. Add what you've eaten below!
+          </p>
+        `;
+        return;
+      }
+      
+      listEl.innerHTML = meals.map((meal, index) => `
+        <div class="meal-item">
+          <img class="meal-item__image" src="${getImagePath(meal.id)}" alt="${meal.name}" onerror="this.style.display='none'">
+          <span class="meal-item__name">${meal.name}</span>
+          <span class="meal-item__category meal-item__category--${meal.category === 'moderation' ? 'moderate' : meal.category}">
+            ${meal.category === 'healthy' ? '🟢 +2' : meal.category === 'moderation' ? '🟡 +1' : '🔴 -1'}
+          </span>
+          <button class="meal-item__remove" data-index="${index}">✕</button>
+        </div>
+      `).join('');
+      
+      // Add remove handlers
+      listEl.querySelectorAll('.meal-item__remove').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const index = parseInt(btn.dataset.index);
+          meals.splice(index, 1);
+          saveMeals();
+          renderMeals();
+          updateDessertStatus();
+        });
+      });
+    }
+
+    function renderFoodPicker(filter = '') {
+      const pickerEl = document.getElementById('food-picker');
+      const filterLower = filter.toLowerCase();
+      
+      const filteredFoods = filter 
+        ? allFoods.filter(f => f.name.toLowerCase().includes(filterLower))
+        : allFoods;
+      
+      pickerEl.innerHTML = filteredFoods.slice(0, 50).map(food => `
+        <div class="food-picker-item" data-id="${food.id}">
+          <img class="food-picker-item__image" src="${getImagePath(food.id)}" alt="${food.name}" onerror="this.textContent='${food.emoji}'">
+          <div class="food-picker-item__name">${food.name}</div>
+        </div>
+      `).join('');
+      
+      // Add click handlers
+      pickerEl.querySelectorAll('.food-picker-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const foodId = item.dataset.id;
+          const food = allFoods.find(f => f.id === foodId);
+          if (food) {
+            meals.push(food);
+            saveMeals();
+            renderMeals();
+            updateDessertStatus();
+            
+            // Visual feedback
+            item.style.transform = 'scale(0.9)';
+            setTimeout(() => item.style.transform = '', 150);
+          }
+        });
+      });
+    }
+
+    async function init() {
+      foods = await loadFoods();
+      
+      // Combine all foods with their categories
+      allFoods = [
+        ...foods.healthy.map(f => ({ ...f, category: 'healthy' })),
+        ...foods.moderation.map(f => ({ ...f, category: 'moderation' })),
+        ...foods.unhealthy.map(f => ({ ...f, category: 'unhealthy' })),
+      ].sort((a, b) => a.name.localeCompare(b.name));
+      
+      renderMeals();
+      updateDessertStatus();
+      renderFoodPicker();
+      
+      // Search handler
+      document.getElementById('food-search').addEventListener('input', (e) => {
+        renderFoodPicker(e.target.value);
+      });
+      
+      // Reset handler
+      document.getElementById('reset-btn').addEventListener('click', () => {
+        if (confirm('Start fresh? This will clear all foods you added today.')) {
+          meals = [];
+          saveMeals();
+          renderMeals();
+          updateDessertStatus();
+        }
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>

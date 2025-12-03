@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Game - Healthy Foods Adventure!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header page-header--game">
+    <a href="index.html" class="back-button">← Home</a>
+    <h1 class="page-title">🎮 Flashcard Game</h1>
+    <p class="page-subtitle">Is this food healthy, okay, or unhealthy?</p>
+  </header>
+
+  <main class="game-container">
+    <div class="game-stats">
+      <div class="stat">
+        <div class="stat__value" id="score">0</div>
+        <div class="stat__label">Score</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value" id="streak">0</div>
+        <div class="stat__label">Streak 🔥</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value" id="total">0</div>
+        <div class="stat__label">Total</div>
+      </div>
+    </div>
+
+    <div class="flashcard" id="flashcard">
+      <img class="flashcard__image" id="food-image" src="" alt="">
+      <div class="flashcard__emoji hidden" id="food-emoji"></div>
+      <h2 class="flashcard__name" id="food-name">Loading...</h2>
+      <p class="flashcard__question">Which category does this food belong to?</p>
+    </div>
+
+    <div class="answer-buttons">
+      <button class="answer-btn answer-btn--healthy" data-answer="healthy">
+        🟢 Healthy
+      </button>
+      <button class="answer-btn answer-btn--moderate" data-answer="moderation">
+        🟡 Okay
+      </button>
+      <button class="answer-btn answer-btn--unhealthy" data-answer="unhealthy">
+        🔴 Unhealthy
+      </button>
+    </div>
+
+    <div class="feedback-overlay" id="feedback-overlay">
+      <div class="feedback-message" id="feedback-message"></div>
+    </div>
+  </main>
+
+  <script type="module">
+    import { loadFoods, getImagePath } from './app.js';
+
+    let foods = null;
+    let allFoods = [];
+    let currentFood = null;
+    let score = 0;
+    let streak = 0;
+    let total = 0;
+    let isAnimating = false;
+
+    // Sound effects (optional - uses Web Audio API)
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    
+    function playSound(type) {
+      const oscillator = audioCtx.createOscillator();
+      const gainNode = audioCtx.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioCtx.destination);
+      
+      if (type === 'correct') {
+        oscillator.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+        oscillator.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1); // E5
+        oscillator.frequency.setValueAtTime(783.99, audioCtx.currentTime + 0.2); // G5
+      } else {
+        oscillator.frequency.setValueAtTime(200, audioCtx.currentTime);
+        oscillator.frequency.setValueAtTime(150, audioCtx.currentTime + 0.1);
+      }
+      
+      gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+      gainNode.gain.exponentialDecayTo = gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+      
+      oscillator.start(audioCtx.currentTime);
+      oscillator.stop(audioCtx.currentTime + 0.3);
+    }
+
+    function shuffle(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    function getRandomFood() {
+      if (allFoods.length === 0) {
+        // Reshuffle when we've gone through all foods
+        allFoods = shuffle([
+          ...foods.healthy.map(f => ({ ...f, category: 'healthy' })),
+          ...foods.moderation.map(f => ({ ...f, category: 'moderation' })),
+          ...foods.unhealthy.map(f => ({ ...f, category: 'unhealthy' })),
+        ]);
+      }
+      return allFoods.pop();
+    }
+
+    function showFood(food) {
+      currentFood = food;
+      
+      const imageEl = document.getElementById('food-image');
+      const emojiEl = document.getElementById('food-emoji');
+      const nameEl = document.getElementById('food-name');
+      
+      // Try to load image, fall back to emoji
+      const imgPath = getImagePath(food.id);
+      imageEl.src = imgPath;
+      imageEl.alt = food.name;
+      imageEl.classList.remove('hidden');
+      emojiEl.classList.add('hidden');
+      
+      imageEl.onerror = () => {
+        imageEl.classList.add('hidden');
+        emojiEl.classList.remove('hidden');
+        emojiEl.textContent = food.emoji;
+      };
+      
+      nameEl.textContent = food.name;
+    }
+
+    function showFeedback(isCorrect, correctCategory) {
+      const flashcard = document.getElementById('flashcard');
+      const overlay = document.getElementById('feedback-overlay');
+      const message = document.getElementById('feedback-message');
+      
+      flashcard.classList.remove('correct', 'incorrect');
+      flashcard.classList.add(isCorrect ? 'correct' : 'incorrect');
+      
+      message.className = 'feedback-message ' + (isCorrect ? 'feedback-message--correct' : 'feedback-message--incorrect');
+      
+      if (isCorrect) {
+        message.textContent = ['Great job! 🎉', 'Awesome! ⭐', 'You got it! 🌟', 'Perfect! 💪'][Math.floor(Math.random() * 4)];
+      } else {
+        const categoryNames = { healthy: 'Healthy 🟢', moderation: 'Okay 🟡', unhealthy: 'Unhealthy 🔴' };
+        message.textContent = `It's ${categoryNames[correctCategory]}`;
+      }
+      
+      // Trigger animation
+      message.style.animation = 'none';
+      message.offsetHeight; // Trigger reflow
+      message.style.animation = '';
+    }
+
+    function updateStats() {
+      document.getElementById('score').textContent = score;
+      document.getElementById('streak').textContent = streak;
+      document.getElementById('total').textContent = total;
+    }
+
+    function handleAnswer(answer) {
+      if (isAnimating || !currentFood) return;
+      
+      isAnimating = true;
+      total++;
+      
+      const isCorrect = answer === currentFood.category;
+      
+      if (isCorrect) {
+        score++;
+        streak++;
+        playSound('correct');
+      } else {
+        streak = 0;
+        playSound('incorrect');
+      }
+      
+      updateStats();
+      showFeedback(isCorrect, currentFood.category);
+      
+      // Next food after delay
+      setTimeout(() => {
+        document.getElementById('flashcard').classList.remove('correct', 'incorrect');
+        showFood(getRandomFood());
+        isAnimating = false;
+      }, 1500);
+    }
+
+    async function init() {
+      foods = await loadFoods();
+      
+      allFoods = shuffle([
+        ...foods.healthy.map(f => ({ ...f, category: 'healthy' })),
+        ...foods.moderation.map(f => ({ ...f, category: 'moderation' })),
+        ...foods.unhealthy.map(f => ({ ...f, category: 'unhealthy' })),
+      ]);
+      
+      showFood(getRandomFood());
+      
+      // Add click handlers
+      document.querySelectorAll('.answer-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          handleAnswer(btn.dataset.answer);
+        });
+      });
+      
+      // Keyboard shortcuts
+      document.addEventListener('keydown', (e) => {
+        if (e.key === '1' || e.key === 'h') handleAnswer('healthy');
+        if (e.key === '2' || e.key === 'o') handleAnswer('moderation');
+        if (e.key === '3' || e.key === 'u') handleAnswer('unhealthy');
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>
