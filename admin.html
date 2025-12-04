@@ -41,26 +41,18 @@
       color: var(--color-text);
     }
     
-    .form-group input,
-    .form-group select {
+    .form-group input {
       width: 100%;
-      padding: var(--space-sm) var(--space-md);
+      padding: var(--space-md) var(--space-lg);
       border: 2px solid var(--color-bg-alt);
-      border-radius: var(--radius-md);
-      font-size: 1rem;
+      border-radius: var(--radius-lg);
+      font-size: 1.1rem;
       font-family: inherit;
     }
     
-    .form-group input:focus,
-    .form-group select:focus {
+    .form-group input:focus {
       outline: none;
       border-color: var(--color-primary);
-    }
-    
-    .form-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-md);
     }
     
     .submit-btn {
@@ -77,9 +69,14 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     
-    .submit-btn:hover {
+    .submit-btn:hover:not(:disabled) {
       transform: translateY(-2px);
       box-shadow: var(--shadow-lg);
+    }
+    
+    .submit-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
     }
     
     .custom-foods-list {
@@ -115,7 +112,7 @@
       font-family: var(--font-display);
     }
     
-    .custom-food-item__category {
+    .custom-food-item__details {
       font-size: 0.85rem;
       color: var(--color-text-light);
     }
@@ -141,9 +138,7 @@
       color: var(--color-text-light);
     }
     
-    .success-message {
-      background: var(--color-healthy-bg);
-      color: var(--color-healthy-dark);
+    .message {
       padding: var(--space-md);
       border-radius: var(--radius-md);
       margin-bottom: var(--space-md);
@@ -152,14 +147,78 @@
       display: none;
     }
     
-    .success-message.show {
+    .message.show {
       display: block;
       animation: fadeIn 0.3s ease;
+    }
+    
+    .message--success {
+      background: var(--color-healthy-bg);
+      color: var(--color-healthy-dark);
+    }
+    
+    .message--error {
+      background: var(--color-unhealthy-bg);
+      color: var(--color-unhealthy-dark);
+    }
+    
+    .message--loading {
+      background: var(--color-moderate-bg);
+      color: var(--color-moderate-dark);
     }
     
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .preview-card {
+      background: var(--color-bg);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      margin-top: var(--space-md);
+      display: none;
+    }
+    
+    .preview-card.show {
+      display: block;
+    }
+    
+    .preview-card h3 {
+      font-family: var(--font-display);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .preview-details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-sm);
+      font-size: 0.9rem;
+    }
+    
+    .confirm-btn {
+      width: 100%;
+      margin-top: var(--space-md);
+      padding: var(--space-md);
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: white;
+      border: none;
+      border-radius: var(--radius-lg);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    
+    .confirm-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .helper-text {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin-top: var(--space-xs);
     }
   </style>
 </head>
@@ -167,69 +226,45 @@
   <header class="page-header">
     <a href="index.html" class="back-button">← Home</a>
     <h1 class="page-title">➕ Add New Foods</h1>
-    <p class="page-subtitle">Add your own foods to the game!</p>
+    <p class="page-subtitle">Just type a food name and AI will do the rest!</p>
   </header>
 
   <main class="admin-container">
     <div class="admin-form">
       <h2>🍽️ Add a New Food</h2>
       
-      <div class="success-message" id="success-message">
+      <div class="message message--success" id="success-message">
         ✅ Food added successfully!
+      </div>
+      <div class="message message--error" id="error-message">
+        ❌ Something went wrong. Please try again.
+      </div>
+      <div class="message message--loading" id="loading-message">
+        🤔 Analyzing food...
       </div>
       
       <form id="add-food-form">
         <div class="form-group">
-          <label for="food-name">Food Name</label>
-          <input type="text" id="food-name" placeholder="e.g., Pizza" required>
+          <label for="food-name">What food do you want to add?</label>
+          <input type="text" id="food-name" placeholder="e.g., spaghetti, apple pie, greek salad..." required>
+          <p class="helper-text">Just type the food name and we'll figure out the rest!</p>
         </div>
         
-        <div class="form-group">
-          <label for="food-category">Category</label>
-          <select id="food-category" required>
-            <option value="">Select a category...</option>
-            <option value="healthy">🟢 Healthy</option>
-            <option value="moderation">🟡 Okay in Moderation</option>
-            <option value="unhealthy">🔴 Unhealthy</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="food-emoji">Emoji (for fallback)</label>
-          <input type="text" id="food-emoji" placeholder="e.g., 🍕" maxlength="4">
-        </div>
-        
-        <div class="form-row">
-          <div class="form-group">
-            <label for="food-protein">Protein</label>
-            <select id="food-protein" required>
-              <option value="low">Low •</option>
-              <option value="medium">Medium ••</option>
-              <option value="high">High •••</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="food-fat">Fat</label>
-            <select id="food-fat" required>
-              <option value="low">Low •</option>
-              <option value="medium">Medium ••</option>
-              <option value="high">High •••</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="food-carbs">Carbs</label>
-            <select id="food-carbs" required>
-              <option value="low">Low •</option>
-              <option value="medium">Medium ••</option>
-              <option value="high">High •••</option>
-            </select>
-          </div>
-        </div>
-        
-        <button type="submit" class="submit-btn">➕ Add Food</button>
+        <button type="submit" class="submit-btn" id="analyze-btn">🔍 Analyze Food</button>
       </form>
+      
+      <div class="preview-card" id="preview-card">
+        <h3 id="preview-name">Food Name</h3>
+        <div class="preview-details">
+          <div><strong>Category:</strong> <span id="preview-category"></span></div>
+          <div><strong>Emoji:</strong> <span id="preview-emoji"></span></div>
+          <div><strong>Protein:</strong> <span id="preview-protein"></span></div>
+          <div><strong>Fat:</strong> <span id="preview-fat"></span></div>
+          <div><strong>Carbs:</strong> <span id="preview-carbs"></span></div>
+          <div><strong>Note:</strong> <span id="preview-description"></span></div>
+        </div>
+        <button class="confirm-btn" id="confirm-btn">✅ Add This Food</button>
+      </div>
     </div>
     
     <div class="custom-foods-list">
@@ -243,6 +278,8 @@
   </main>
 
   <script type="module">
+    let pendingFood = null;
+    
     // Get custom foods from localStorage
     function getCustomFoods() {
       const stored = localStorage.getItem('customFoods');
@@ -257,6 +294,16 @@
     // Generate a URL-friendly ID from name
     function generateId(name) {
       return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    }
+    
+    // Show a message
+    function showMessage(type) {
+      ['success', 'error', 'loading'].forEach(t => {
+        document.getElementById(`${t}-message`).classList.remove('show');
+      });
+      if (type) {
+        document.getElementById(`${type}-message`).classList.add('show');
+      }
     }
     
     // Render the list of custom foods
@@ -275,15 +322,19 @@
       
       const categoryLabels = {
         healthy: '🟢 Healthy',
-        moderation: '🟡 Okay in Moderation',
+        moderation: '🟡 Okay',
         unhealthy: '🔴 Unhealthy'
       };
+      
+      const dotMap = { low: '•', medium: '••', high: '•••' };
       
       container.innerHTML = foods.map((food, index) => `
         <div class="custom-food-item">
           <div class="custom-food-item__info">
             <div class="custom-food-item__name">${food.emoji || '🍽️'} ${food.name}</div>
-            <div class="custom-food-item__category">${categoryLabels[food.category]}</div>
+            <div class="custom-food-item__details">
+              ${categoryLabels[food.category]} · P${dotMap[food.protein]} F${dotMap[food.fat]} C${dotMap[food.carbs]}
+            </div>
           </div>
           <button class="custom-food-item__delete" data-index="${index}">Delete</button>
         </div>
@@ -301,27 +352,72 @@
       });
     }
     
+    // Analyze food with AI
+    async function analyzeFood(foodName) {
+      const response = await fetch('/api/analyze-food', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ foodName })
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to analyze food');
+      }
+      
+      return response.json();
+    }
+    
+    // Show preview
+    function showPreview(food) {
+      const categoryLabels = {
+        healthy: '🟢 Healthy',
+        moderation: '🟡 Okay in Moderation',
+        unhealthy: '🔴 Unhealthy'
+      };
+      const dotMap = { low: '•', medium: '••', high: '•••' };
+      
+      document.getElementById('preview-name').textContent = `${food.emoji} ${food.name}`;
+      document.getElementById('preview-category').textContent = categoryLabels[food.category];
+      document.getElementById('preview-emoji').textContent = food.emoji;
+      document.getElementById('preview-protein').textContent = dotMap[food.protein];
+      document.getElementById('preview-fat').textContent = dotMap[food.fat];
+      document.getElementById('preview-carbs').textContent = dotMap[food.carbs];
+      document.getElementById('preview-description').textContent = food.description;
+      
+      document.getElementById('preview-card').classList.add('show');
+      pendingFood = food;
+    }
+    
     // Handle form submission
-    document.getElementById('add-food-form').addEventListener('submit', (e) => {
+    document.getElementById('add-food-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       
-      const name = document.getElementById('food-name').value.trim();
-      const category = document.getElementById('food-category').value;
-      const emoji = document.getElementById('food-emoji').value.trim() || '🍽️';
-      const protein = document.getElementById('food-protein').value;
-      const fat = document.getElementById('food-fat').value;
-      const carbs = document.getElementById('food-carbs').value;
+      const foodName = document.getElementById('food-name').value.trim();
+      const btn = document.getElementById('analyze-btn');
+      
+      btn.disabled = true;
+      showMessage('loading');
+      document.getElementById('preview-card').classList.remove('show');
+      
+      try {
+        const foodData = await analyzeFood(foodName);
+        showMessage(null);
+        showPreview(foodData);
+      } catch (error) {
+        console.error('Error:', error);
+        showMessage('error');
+      } finally {
+        btn.disabled = false;
+      }
+    });
+    
+    // Confirm adding food
+    document.getElementById('confirm-btn').addEventListener('click', () => {
+      if (!pendingFood) return;
       
       const newFood = {
-        id: generateId(name),
-        name,
-        category,
-        emoji,
-        description: 'Custom food',
-        protein,
-        fat,
-        carbs,
-        processed: 'medium',
+        ...pendingFood,
+        id: generateId(pendingFood.name),
         isCustom: true
       };
       
@@ -329,15 +425,13 @@
       foods.push(newFood);
       saveCustomFoods(foods);
       
-      // Show success message
-      const successMsg = document.getElementById('success-message');
-      successMsg.classList.add('show');
-      setTimeout(() => successMsg.classList.remove('show'), 3000);
+      showMessage('success');
+      setTimeout(() => showMessage(null), 3000);
       
-      // Reset form
-      e.target.reset();
+      document.getElementById('food-name').value = '';
+      document.getElementById('preview-card').classList.remove('show');
+      pendingFood = null;
       
-      // Re-render list
       renderCustomFoods();
     });
     
@@ -346,4 +440,3 @@
   </script>
 </body>
 </html>
-
