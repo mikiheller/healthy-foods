@@ -3,13 +3,35 @@
 // ============================================
 
 /**
- * Load foods data from JSON
+ * Get custom foods from localStorage
+ */
+function getCustomFoods() {
+  const stored = localStorage.getItem('customFoods');
+  return stored ? JSON.parse(stored) : [];
+}
+
+/**
+ * Load foods data from JSON and merge with custom foods
  */
 export async function loadFoods() {
   try {
-    const response = await fetch('./data/foods.json');
+    const response = await fetch('/data/foods.json');
     if (!response.ok) throw new Error('Failed to load foods');
-    return await response.json();
+    const foods = await response.json();
+    
+    // Merge custom foods from localStorage
+    const customFoods = getCustomFoods();
+    customFoods.forEach(food => {
+      if (food.category === 'healthy') {
+        foods.healthy.push(food);
+      } else if (food.category === 'moderation') {
+        foods.moderation.push(food);
+      } else if (food.category === 'unhealthy') {
+        foods.unhealthy.push(food);
+      }
+    });
+    
+    return foods;
   } catch (error) {
     console.error('Error loading foods:', error);
     return { healthy: [], moderation: [], unhealthy: [] };

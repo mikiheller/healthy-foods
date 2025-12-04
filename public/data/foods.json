@@ -1031,6 +1031,16 @@
       "fat": "low",
       "carbs": "high",
       "processed": "medium"
+    },
+    {
+      "id": "corn-dog",
+      "name": "Corn Dog",
+      "emoji": "🌭",
+      "description": "Battered and fried",
+      "protein": "medium",
+      "fat": "medium",
+      "carbs": "high",
+      "processed": "high"
     }
   ],
   "unhealthy": [
